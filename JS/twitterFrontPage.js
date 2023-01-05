@@ -170,14 +170,6 @@ tweetPostBtn.addEventListener("click", async (e) => {
 
 window.addEventListener("DOMContentLoaded", () => getTweets())
 
-
-
-
-
-
-
-
-
 //***************************************************************************************************************/
 
 tweetPostText.addEventListener("click", (e) => {
@@ -221,8 +213,8 @@ labelChange.addEventListener("click", () => {
   midBodyHeader.classList.toggle("dark");
   tweetPostText.classList.toggle("dark");
   tweetsContainer.classList.toggle("dark");
-  midContainer.style.border = "1px solid black";
-  rightSearchContainer.style.border="1px solid black";
+  // midContainer.style.border = "1px solid black";
+  // rightSearchContainer.style.border="1px solid black";
 })
 
 moreContainer.addEventListener("click", (e) => {
