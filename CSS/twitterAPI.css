@@ -1,0 +1,95 @@
+.tweet {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 16px;
+  }
+  
+  .tweet_header {
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    border-bottom: 1px solid #e6ecf0;
+  }
+  /* .tweet_header .border{
+    border-bottom: 1px solid black;
+  } */
+  .tweet_header img {
+    width: 68px;
+    height: 68px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 16px;
+  
+  }
+  
+  .tweet_header h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+  }
+  
+  .tweet_header p {
+    font-size: 14px;
+    color: #657786;
+    margin: 0;
+  }
+  
+  .each_tweet_body {
+    padding: 16px;
+  }
+  
+  .each_tweet_body p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+  }
+  
+  .tweet_footer {
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    border-top: 1px solid #e6ecf0;
+    font-size: 14px;
+    color: #657786;
+  }
+  /* .tweet_footer  .border{
+    border-top: 1px solid black;
+  } */
+  .tweet_footer p {
+    margin: 0;
+    margin-right: 16px;
+  }
+ .tweet_text_img{
+  width: 300px;
+  height:200px ; 
+  object-fit: cover;
+ }
+ .tweet_body img{
+   width: 500px;
+ }
+ .dark .tweet {
+  color: #fff; 
+  background-color: #000; 
+}
+
+  /* loader css */
+
+
+  .loader {
+    border: 8px solid #f3f3f3; 
+    border-top: 8px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+    margin:-600px;
+    margin-left: 45%;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }

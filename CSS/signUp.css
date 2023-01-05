@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+body{
+    width: 100%;
+    background: #e5eff7;
+}
+.sign_pop_up{
+    padding: 1rem 2rem;
+    width: 37%;
+    /* height: 85vh; */
+    margin: 3rem auto;
+    border-radius: 15px;
+    cursor: pointer;
+    background-color: #ffff;
+}
+.img_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+.twitter_icon{
+    width: 40px;
+}
+.sign_pop_up h1{
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+.sign_box_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.sign_box{
+    width: 55%;
+    border: 1px solid rgb(182, 181, 181);
+    padding: .8rem;
+    margin-bottom: 1.5rem;
+    font-size: .9rem;
+    font-weight: bold;
+    word-spacing: 1px;
+    border-radius: 25px;
+}
+.sign_box:hover{
+    background-color: rgb(240, 247, 250);
+    border: 1px solid skyblue;
+}
+.sign_box span{
+    margin-left: 3rem;
+}
+.sign_box .fa-apple{
+    font-size: 1.3rem;
+}
+.sign_pop_up .pop_text{
+    font-size: .8rem;
+    color: #535252;
+    text-align: center;
+    color: black;
+}
+.continue_container a{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.continue{
+    width: 70%;
+    padding: 1rem;
+    background-color:black;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+.continue:hover{
+    background-color: rgb(202, 237, 252);
+    color: black;
+}
+.form,.forgot_detail{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+    align-items: center;
+}
+input {
+    width: 57%;
+    padding: 12px 20px;
+    margin-top: 20px;
+    outline: none;
+    background: white;
+    border: 1px solid rgb(182, 181, 181);
+    border-radius: 5px;
+}
+input:hover{
+    border: 1px solid skyblue;
+}
+::placeholder {
+    color: black;
+}
+.forgot_detail{
+    margin-top: 1.5rem;
+}
+.forgot_detail a{
+    color: black;
+}
+.forgot_detail a:hover{
+    color: rgb(51, 183, 235);
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
