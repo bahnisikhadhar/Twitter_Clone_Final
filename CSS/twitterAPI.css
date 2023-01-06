@@ -11,7 +11,7 @@
     display: flex;
     align-items: center;
     padding: 16px;
-    border-bottom: 1px solid #e6ecf0;
+    /* border-bottom: 1px solid #e6ecf0; */
   }
   /* .tweet_header .border{
     border-bottom: 1px solid black;
@@ -51,7 +51,7 @@
     display: flex;
     align-items: center;
     padding: 16px;
-    border-top: 1px solid #e6ecf0;
+    /* border-top: 1px solid #e6ecf0; */
     font-size: 14px;
     color: #657786;
   }

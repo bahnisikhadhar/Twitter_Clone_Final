@@ -101,6 +101,8 @@ const newTweets = (tweet) => {
 
 }
 
+//******************************************DELETE***********************************************/
+
 // async function deleteTweets(id) {
 //   try {
 //     const response = await fetch(`https://tweets-api.onrender.com/tweets/${id}`, {
@@ -133,6 +135,7 @@ window.addEventListener('scroll', () => {
 })
 
 
+//****************************************************************************************************** */
 
 tweetPostBtn.addEventListener("click", async (e) => {
 
@@ -203,6 +206,8 @@ userProfile.addEventListener("click", (e) => {
   logoutDtetails.classList.add("display_flex");
 })
 
+//*********************************************for dark mode**************************************************/
+
 labelChange.addEventListener("click", () => {
   labelChange.classList.toggle("active");
   body.classList.toggle("dark");
@@ -215,8 +220,25 @@ labelChange.addEventListener("click", () => {
   tweetsContainer.classList.toggle("dark");
   // midContainer.style.border = "1px solid black";
   // rightSearchContainer.style.border="1px solid black";
+  if (labelChange.classList.contains("active")) {
+    localStorage.setItem("darkClass", "active");
+  } else {
+    localStorage.removeItem("darkClass");
+  }
 })
-
+if (localStorage.getItem("darkClass") == "active") {
+  labelChange.classList.add("active");
+  body.classList.add("dark");
+  tweetsContainer.classList.add("dark");
+  settingsContainer.style.color = "black";
+  rightSearchContainer.classList.toggle("dark");
+  rightHappening.classList.toggle("dark");
+  rightFollow.classList.toggle("dark");
+  midBodyHeader.classList.toggle("dark");
+  tweetPostText.classList.toggle("dark");
+  
+}
+//**********************************************************************************************************
 moreContainer.addEventListener("click", (e) => {
   e.stopPropagation();
   settingsContainer.classList.add("display_block");
