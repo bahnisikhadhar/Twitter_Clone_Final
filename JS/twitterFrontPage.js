@@ -22,24 +22,27 @@ const tweetsContainer = document.querySelector("#tweet_body");
 const tweetPostBtn = document.querySelector(".tweet_post_btn");
 
 
-//Show loading
+//*************************************Show loading**********************************************
+
 function loading() {
   loader.hidden = false;
   tweetsContainer.hidden = true;
 }
-//Hide Loading
+//************************************Hide Loading**********************************************
+
 function complete() {
   tweetsContainer.hidden = false;
   loader.hidden = true;
 
 }
 
+//*************************************GETTING TWEETS FROM API AND SHOEING IT**********************************/
+
 let data;
-
 async function getTweets() {
-  //
+  
   try {
-
+    
     const response = await fetch("https://tweets-api.onrender.com/tweets");
     data = await response.json();
     console.log(data);
@@ -67,15 +70,31 @@ const showTweets = async (tweets) => {
     </div>
     <div class="tweet_footer">
       <p>${tweet.created_at}</p>
-      <p>${tweet.retweet_count} Retweets</p>
-      <p>${tweet.view_count} views</p>
-      <p>${tweet.favorite_count} Likes</p>
+
+      <div class="icon_detail">
+      <div class="tweet_icon_container retweet"><i class="fa-solid fa-retweet"></i></div>
+      <div> ${tweet.retweet_count} </div>
+      </div>
+
+      <div class="icon_detail">
+      <div class="tweet_icon_container like"><i class="fa-regular fa-heart"></i></div>
+      <div>${tweet.favorite_count} </div>
+      </div>
+
+      <div class="icon_detail">
+      <div class="tweet_icon_container view"><i class="fa-regular fa-comment"></i></div>
+      <div>${tweet.view_count}</div>
+      </div>
+     
     </div>
     `;
     tweetsContainer.innerHTML += template;
   })
 
 }
+
+//*************************************CREATING AND SHOWING NEW DATA WHEN POSTED MANUALLY****************/
+
 const newTweets = (tweet) => {
   const template = `
   <div class="tweet darkbody">
@@ -89,16 +108,31 @@ const newTweets = (tweet) => {
    <img src="${tweet.text_img}" alt="${tweet.user.name}" />
   </div>
   <div class="tweet_footer">
-    <p>${tweet.created_at}</p>
-    <p>${tweet.retweet_count} Retweets</p>
-    <p>${tweet.view_count} views</p>
-    <p>${tweet.favorite_count} Likes</p>
+  <p>${tweet.created_at}</p>
+
+  <div class="icon_detail">
+  <div class="tweet_icon_container retweet"><i class="fa-solid fa-retweet"></i></div>
+  <div> ${tweet.retweet_count} </div>
+  </div>
+
+  <div class="icon_detail">
+  <div class="tweet_icon_container like"><i class="fa-regular fa-heart"></i></div>
+  <div>${tweet.favorite_count} </div>
+  </div>
+
+  <div class="icon_detail">
+  <div class="tweet_icon_container view"><i class="fa-regular fa-comment"></i></div>
+  <div>${tweet.view_count}</div>
+  </div>
   </div>
   
   `;
   
     tweetsContainer.insertAdjacentHTML('afterbegin', template);
-
+    // <p>${tweet.created_at}</p>
+    // <p>${tweet.retweet_count} Retweets</p>
+    // <p>${tweet.view_count} views</p>
+    // <p>${tweet.favorite_count} Likes</p>
 }
 
 //******************************************DELETE***********************************************/
@@ -117,7 +151,7 @@ const newTweets = (tweet) => {
 // }
 // deleteTweets(17) 
 
-// *********************************************for infinite scroll*********************************************
+// *********************************************FOR INFINITE SCROLL*********************************************
 
 window.addEventListener('scroll', () => {
   const {
@@ -167,10 +201,6 @@ tweetPostBtn.addEventListener("click", async (e) => {
 
 })
 
-
-
-
-
 window.addEventListener("DOMContentLoaded", () => getTweets())
 
 //***************************************************************************************************************/
@@ -206,7 +236,7 @@ userProfile.addEventListener("click", (e) => {
   logoutDtetails.classList.add("display_flex");
 })
 
-//*********************************************for dark mode**************************************************/
+//*********************************************FOR DARK MODE**************************************************/
 
 labelChange.addEventListener("click", () => {
   labelChange.classList.toggle("active");
@@ -220,6 +250,7 @@ labelChange.addEventListener("click", () => {
   tweetsContainer.classList.toggle("dark");
   // midContainer.style.border = "1px solid black";
   // rightSearchContainer.style.border="1px solid black";
+  
   if (labelChange.classList.contains("active")) {
     localStorage.setItem("darkClass", "active");
   } else {

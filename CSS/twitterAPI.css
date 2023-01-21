@@ -13,9 +13,7 @@
     padding: 16px;
     /* border-bottom: 1px solid #e6ecf0; */
   }
-  /* .tweet_header .border{
-    border-bottom: 1px solid black;
-  } */
+  
   .tweet_header img {
     width: 68px;
     height: 68px;
@@ -38,7 +36,8 @@
   }
   
   .each_tweet_body {
-    padding: 16px;
+    padding-left: 4.2rem;
+    padding-right: 1rem;
   }
   
   .each_tweet_body p {
@@ -48,28 +47,56 @@
   }
   
   .tweet_footer {
+    width: 50%;
     display: flex;
     align-items: center;
-    padding: 16px;
-    /* border-top: 1px solid #e6ecf0; */
+    justify-content: space-between;
+    padding-left: 4.2rem;
     font-size: 14px;
     color: #657786;
   }
-  /* .tweet_footer  .border{
-    border-top: 1px solid black;
-  } */
+ 
   .tweet_footer p {
     margin: 0;
     margin-right: 16px;
   }
  .tweet_text_img{
-  width: 300px;
-  height:200px ; 
+  /* width: 300px;
+  height:200px ;  */
+  width: 70%;
+  height: 40%;
   object-fit: cover;
+  border-radius: 10px;
+  margin-top: 1rem;
  }
  .tweet_body img{
    width: 500px;
  }
+ .icon_detail{
+  display: flex;
+  align-items: center;
+ }
+ .tweet_icon_container{
+  display: flex;
+  align-items: center;
+  border-radius: 25px;
+  width: 75%;
+  padding: .6rem .7rem;
+  padding-left: .5rem;
+  cursor: pointer;
+ }
+ .retweet:hover {
+  background-color: rgb(234, 247, 234);
+  color: rgb(5, 161, 5);
+}
+.like:hover {
+  background-color: rgb(246, 234, 236);
+  color: rgb(235, 75, 101);
+}
+.view:hover {
+  background-color: rgb(219, 234, 240);
+  color: rgb(84, 184, 224);
+}
  .dark .tweet {
   color: #fff; 
   background-color: #000; 
